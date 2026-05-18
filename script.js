@@ -31,6 +31,9 @@ button.addEventListener("click", async () => {
                     <div class="profile-info">
                         <h2>${UserData.name}</h2>
                         <p>${UserData.bio || "Este usuário não possui bio 😕"}</p>
+                        <p>${UserData.followers} seguidores</p>
+                        <p>${UserData.following} seguindo</p>
+                       
                     </div>
                 </div>
             `;
