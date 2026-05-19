@@ -12,7 +12,7 @@ export function renderProfile(element, UserData, UserRepos) {
 
     const repositoriesHTMl = UserRepos && UserRepos.length > 0 ? UserRepos.map(repo => `
         <div class="repo-card">
-           <h3>${repo.name}</h3>
+           <a href="${repo.html_url}" target="_blank"> <h3>${repo.name}</h3> </a>
            <div class="repo-stats">
                 <span>⭐ Stars: ${repo.stargazers_count}</span>
                 <span>🍴  Forks: ${repo.forks_count}</span>
