@@ -11,14 +11,14 @@
   --card: hsl(0, 0%, 100%);
   --primary: hsl(222.2, 47.4%, 11.2%);
   --primary-foreground: hsl(210, 40%, 98%);
-  
+
   --spacing-xs: 0.5rem;
   --spacing-sm: 0.75rem;
   --spacing-md: 1rem;
   --spacing-lg: 1.5rem;
   --spacing-xl: 2rem;
   --spacing-2xl: 3rem;
-  
+
   --font-xs: 0.75rem;
   --font-sm: 0.875rem;
   --font-md: 1rem;
@@ -26,19 +26,19 @@
   --font-xl: 1.5rem;
   --font-2xl: 1.875rem;
   --font-3xl: 2rem;
-  
+
   --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  
+
   --transition: all 0.2s;
 }
 
 body {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #fda085 100%);
   background-size: 400% 400%;
-  font-family: "Inter", "Segoe UI", sans-serif;  
-  text-align: center;    
+  font-family: "Inter", "Segoe UI", sans-serif;
+  text-align: center;
   padding-bottom: 100px;
   min-height: 100vh;
   color: var(--foreground);
@@ -46,19 +46,19 @@ body {
 }
 
 main {
-  display: flex;  
-  justify-content: center;
+  display: flex;
+  align-items: center; /* centraliza horizontalmente os filhos */
   flex-direction: column;
-  padding: var(--spacing-2xl) var(--spacing-md);      
+  padding: var(--spacing-2xl) var(--spacing-md);
 }
 
-.devicon-github-original{
+.devicon-github-original {
   font-size: var(--font-3xl);
   margin-bottom: var(--spacing-xl);
   color: #FFFFFF;
 }
 
-.section{
+.section {
   padding: 4rem 0;
   border-top: 1px solid var(--border);
 }
@@ -146,25 +146,26 @@ main {
 }
 
 .profile-card {
-  display:flex;
+  display: flex;
+  justify-content: center; /* centra o grupo (avatar + infos) dentro do container */
   align-items: center;
   gap: var(--spacing-lg);
-  width: 100%;
+  width: auto; /* permite centrar via margin auto */
+  max-width: 48rem;
+  margin: 0 auto;
   text-align: left;
 }
 
-.profile-info {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-xs);
-  flex: 1;
-  line-height: 0.65rem;
-  font-size: 0.95rem;
-
+.profile-info span {
+  color: var(--muted-foreground);
+  padding: 0rem 0rem 0.2rem 0rem;
+  font-size: 0.80rem;
 }
 
+
+
 .profile-card h2 {
-  margin-bottom: 1rem;
+  margin: 0 0 1rem 0;
 }
 
 .profile-card p {
@@ -172,9 +173,86 @@ main {
   color: var(--muted-foreground);
 }
 
-.profile-image{ 
+.profile-image {
   width: 120px;
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
+}
+
+.profile-counters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  margin: 60px 0;
+}
+
+.profile-counters h4 {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+
+.profile-counters span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.profile-repositories {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.profile-repositories h2 {
+  margin-bottom: 1.5rem;
+  font-size: var(--font-2xl);
+  color: var(--primary);
+  text-align: left;
+}
+
+.repositories-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-lg);
+}
+
+.repo-card {
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  box-shadow: 0 5px 5px rgba(15, 23, 42, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  text-align: left;
+  flex: 1 1 280px;
+  min-width: 260px;
+  max-width: 320px;
+}
+
+
+
+.repo-card h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--foreground);
+  line-height: 1.4;
+}
+
+.repo-stats {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.repo-stats span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 10px;
+  background-color: #eee;
+  color: #212432;
+  font-size: 0.9rem;
 }
