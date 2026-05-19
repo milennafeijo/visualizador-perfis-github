@@ -2,6 +2,8 @@
 
 Um projeto simples em HTML, CSS e JavaScript que consome a API pública do GitHub para mostrar dados de perfil e os repositórios de um usuário.
 
+Veja o projeto <a href="https://milennafeijo.github.io/visualizador-perfis-github/">aqui</a>
+
 ## Funcionalidades
 
 - Busca por usuário do GitHub
