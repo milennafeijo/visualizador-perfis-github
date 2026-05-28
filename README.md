@@ -1,6 +1,6 @@
 # Visualizador de Perfis do GitHub
 
-Um projeto simples em HTML, CSS e JavaScript que consome a API pública do GitHub para mostrar dados de perfil e os repositórios de um usuário.
+Projeto desenvolvido durante o curso, onde você pesquisa um perfil do GitHub e visualiza as informações do usuário.
 
 Veja o projeto <a href="https://milennafeijo.github.io/visualizador-perfis-github/">aqui</a>
 
@@ -24,6 +24,15 @@ Veja o projeto <a href="https://milennafeijo.github.io/visualizador-perfis-githu
 
 - A API utilizada é `https://api.github.com`
 - A busca de repositórios está limitada a 10 itens e ordenada pelo mais recente
+
+## O que aprendi
+
+• Integração com API externa (GitHub API) <br>
+• Leitura de documentação de API <br> 
+• Fetch de dados com JavaScript <br> 
+• Manipulação do DOM com dados dinâmicos <br> 
+• Entender como funciona a integração de API no JavaScript <br> 
+• Identificar os endpoints corretos na documentação do GitHub <br>
 
 
 
